@@ -13,7 +13,7 @@ const Home: NextPage = () => {
     <NetworkProvider>
       <JuiceProvider provider={provider}>
         <main>
-          <header>
+          <header className="px-10 py-5 flex justify-end">
             <ConnectWalletButton />
           </header>
           <Card />
