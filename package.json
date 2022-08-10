@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@jbx-protocol/contracts-v1": "^2.0.0",
     "@web3-onboard/core": "^2.6.0",
     "@web3-onboard/injected-wallets": "^2.0.15",
     "@web3-onboard/react": "^2.2.5",

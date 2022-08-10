@@ -816,6 +816,11 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@jbx-protocol/contracts-v1@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@jbx-protocol/contracts-v1/-/contracts-v1-2.0.0.tgz#616dd2adb8603dd1067d29fa613e704737adc243"
+  integrity sha512-70BvKKor6iM8eBTa4klH7iOA5+/oa0J5gMpazK5nECrn8U0xeKTB19v+jXmTu+26JYruZHzCKZVdV5aH+c8qnA==
+
 "@next/env@12.2.4":
   version "12.2.4"
   resolved "https://registry.npmjs.org/@next/env/-/env-12.2.4.tgz"
