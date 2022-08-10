@@ -17,6 +17,7 @@ export function Input(props: React.HTMLProps<HTMLInputElement>) {
           id="price"
           className="focus:ring-sky-700 focus:border-sky-700 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
           placeholder="0.00"
+          step="0.01"
           aria-describedby="price-currency"
         />
         <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">

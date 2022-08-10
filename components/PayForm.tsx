@@ -6,11 +6,10 @@ import { AmountButton } from "./AmountButton";
 import { Button } from "./Button";
 import { Input } from "./Input";
 
-const defaultAmounts = [0.1, 0.69, 1];
+const defaultAmounts = [0.001, 0.69, 1];
 
 export function PayForm(props: React.HTMLProps<HTMLFormElement>) {
-  const [amount, setAmount] = useState<number>(0);
-  const { signingProvider } = useContext(NetworkContext);
+  const [amount, setAmount] = useState<string>("0");
 
   const payProjectTx = usePayProjectTx();
 
@@ -18,7 +17,7 @@ export function PayForm(props: React.HTMLProps<HTMLFormElement>) {
     e.preventDefault();
 
     await payProjectTx({
-      projectId: 329,
+      projectId: 1,
       valueWad: parseEther(amount.toString()),
     });
   };
@@ -30,7 +29,7 @@ export function PayForm(props: React.HTMLProps<HTMLFormElement>) {
           {defaultAmounts.map((amount) => (
             <AmountButton
               amount={amount}
-              onClick={() => setAmount(amount)}
+              onClick={() => setAmount(amount.toString())}
               key={amount}
             />
           ))}
@@ -38,11 +37,13 @@ export function PayForm(props: React.HTMLProps<HTMLFormElement>) {
         <div>
           <Input
             value={amount}
-            onChange={(e) =>
-              setAmount(parseInt((e.target as HTMLInputElement).value || "0"))
-            }
+            onChange={(e) => {
+              const targetValue = (e.target as HTMLInputElement).value;
+              setAmount(targetValue);
+            }}
           />
         </div>
+
         <span className="text-xs font-light text-gray-500">
           Receive 1,000,000 tokens
         </span>

@@ -8,7 +8,7 @@ import { NetworkContext } from "../contexts/NetworkProvider";
 const injected = injectedModule();
 
 const infuraKey = "c2838024e339438fbe8a31d6754efe8a";
-const rpcUrl = `https://mainnet.infura.io/v3/${infuraKey}`;
+const rpcUrl = `https://rinkeby.infura.io/v3/${infuraKey}`;
 
 // initialize Onboard
 init({
@@ -18,6 +18,12 @@ init({
       id: "0x1",
       token: "ETH",
       label: "Ethereum Mainnet",
+      rpcUrl,
+    },
+    {
+      id: "0x4",
+      token: "ETH",
+      label: "Rinkeby Testnet",
       rpcUrl,
     },
   ],
@@ -35,7 +41,8 @@ export function ConnectWalletButton() {
         wallet.provider,
         "any"
       );
-      if (!ethersProvider) return;
+      if (!ethersProvider || !setSigningProvider) return;
+
       setSigningProvider(ethersProvider);
     }
   }, [wallet, setSigningProvider]);

@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 import { PayForm } from "./PayForm";
 
 export function Card() {
-  const { data: uri } = useProjectUri({ projectId: 329 });
+  const { data: uri } = useProjectUri({ projectId: 1 });
 
   return (
     <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">

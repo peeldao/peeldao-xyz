@@ -12,6 +12,7 @@
     "@web3-onboard/core": "^2.6.0",
     "@web3-onboard/injected-wallets": "^2.0.15",
     "@web3-onboard/react": "^2.2.5",
+    "ethers": "^5.6.9",
     "juice-sdk-v1": "^1.1.0-alpha",
     "next": "12.2.4",
     "react": "18.2.0",
