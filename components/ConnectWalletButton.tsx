@@ -2,13 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { init, useConnectWallet } from "@web3-onboard/react";
 import injectedModule from "@web3-onboard/injected-wallets";
 import { ethers } from "ethers";
-import NetworkProvider from "../providers/NetworkProvider";
 import { NetworkContext } from "../contexts/NetworkProvider";
+import { rpcUrl } from "../constants/network";
 
 const injected = injectedModule();
-
-const infuraKey = "c2838024e339438fbe8a31d6754efe8a";
-const rpcUrl = `https://rinkeby.infura.io/v3/${infuraKey}`;
 
 // initialize Onboard
 init({
@@ -17,13 +14,7 @@ init({
     {
       id: "0x1",
       token: "ETH",
-      label: "Ethereum Mainnet",
-      rpcUrl,
-    },
-    {
-      id: "0x4",
-      token: "ETH",
-      label: "Rinkeby Testnet",
+      label: "Ethereum",
       rpcUrl,
     },
   ],
@@ -32,8 +23,6 @@ init({
 export function ConnectWalletButton() {
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
   const { setSigningProvider } = useContext(NetworkContext);
-
-  // create an ethers provider
 
   useEffect(() => {
     if (wallet) {

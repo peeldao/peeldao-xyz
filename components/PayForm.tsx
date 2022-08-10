@@ -1,14 +1,14 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { parseEther } from "@ethersproject/units";
-import { NetworkContext } from "../contexts/NetworkProvider";
 import usePayProjectTx from "../hooks/write/usePayProjectTx";
 import { AmountButton } from "./AmountButton";
 import { Button } from "./Button";
 import { Input } from "./Input";
+import { PEEL_PROJECT_ID } from "../constants/juicebox";
 
-const defaultAmounts = [0.001, 0.69, 1];
+const defaultAmounts = [0.01, 0.69, 1];
 
-export function PayForm(props: React.HTMLProps<HTMLFormElement>) {
+export function PayForm() {
   const [amount, setAmount] = useState<string>("0");
 
   const payProjectTx = usePayProjectTx();
@@ -17,13 +17,13 @@ export function PayForm(props: React.HTMLProps<HTMLFormElement>) {
     e.preventDefault();
 
     await payProjectTx({
-      projectId: 1,
+      projectId: PEEL_PROJECT_ID,
       valueWad: parseEther(amount.toString()),
     });
   };
 
   return (
-    <form {...props} onSubmit={onSubmit}>
+    <form onSubmit={onSubmit}>
       <div className="mb-5">
         <div className="mb-1">
           {defaultAmounts.map((amount) => (
@@ -44,9 +44,9 @@ export function PayForm(props: React.HTMLProps<HTMLFormElement>) {
           />
         </div>
 
-        <span className="text-xs font-light text-gray-500">
+        {/* <span className="text-xs font-light text-gray-500">
           Receive 1,000,000 tokens
-        </span>
+        </span> */}
       </div>
 
       <Button />

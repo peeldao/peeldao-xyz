@@ -27,12 +27,19 @@ export default function usePayProjectTx(): (
   } = useHookState<DataType>();
 
   return ({ projectId, valueWad }: Args) => {
-    console.log(connectedWalletAddress);
     if (!signingProvider || !connectedWalletAddress)
       return { loading, data, error: new Error("No connected wallet.") };
 
     setLoading(true);
     console.log(connectedWalletAddress);
+
+    console.info("📗 Calling `pay` with args", [
+      projectId,
+      connectedWalletAddress,
+      "",
+      false,
+      { value: valueWad.toString() },
+    ]);
 
     getTerminalV1_1Contract(signingProvider.getSigner())
       .pay(projectId, connectedWalletAddress, "", false, { value: valueWad })
