@@ -2,6 +2,7 @@ import { JsonRpcProvider } from "@ethersproject/providers";
 import { NextPage } from "next";
 import { Card } from "../components/Card";
 import { ConnectWalletButton } from "../components/ConnectWalletButton";
+import { WarningBanner } from "../components/WarningBanner";
 import { rpcUrl } from "../constants/network";
 import JuiceProvider from "../providers/JuiceProvider";
 import NetworkProvider from "../providers/NetworkProvider";
@@ -16,6 +17,8 @@ const Home: NextPage = () => {
           <header className="px-10 py-5 flex justify-end">
             <ConnectWalletButton />
           </header>
+
+          <WarningBanner />
           <Card />
         </main>
       </JuiceProvider>
