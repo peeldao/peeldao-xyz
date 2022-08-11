@@ -43,7 +43,7 @@ init({
 export function ConnectWalletButton({
   connectText = "Connect",
 }: {
-  connectText: string;
+  connectText?: string;
 }) {
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
   const { setSigningProvider } = useContext(NetworkContext);

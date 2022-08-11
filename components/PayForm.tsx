@@ -11,11 +11,14 @@ const defaultAmounts = [0.01, 0.69, 1];
 
 export function PayForm() {
   const [amount, setAmount] = useState<string>("0");
+  const [hasClicked, setHasClicked] = useState<boolean>(false);
 
   const payProjectTx = usePayProjectTx();
 
   const onSubmit: React.FormEventHandler = async (e) => {
     e.preventDefault();
+
+    if (!hasClicked) setHasClicked(true);
 
     await payProjectTx({
       projectId: PEEL_PROJECT_ID,
@@ -42,6 +45,7 @@ export function PayForm() {
               const targetValue = (e.target as HTMLInputElement).value;
               setAmount(targetValue);
             }}
+            aria-invalid={amount === "0" && hasClicked}
           />
         </div>
 

@@ -11,33 +11,11 @@ import NetworkProvider from "../providers/NetworkProvider";
 const Home: NextPage = () => {
   const provider = new JsonRpcProvider(rpcUrl);
 
-  useEffect(() => {
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-
-    // Whenever the user explicitly chooses light mode
-    localStorage.theme = "light";
-
-    // Whenever the user explicitly chooses dark mode
-    localStorage.theme = "dark";
-
-    // Whenever the user explicitly chooses to respect the OS preference
-    localStorage.removeItem("theme");
-  }, []);
-
   return (
     <NetworkProvider>
       <JuiceProvider provider={provider}>
-        <main className="bg-slate-50 h-screen dark:bg-gray-900">
-          <header className="px-10 py-5 flex justify-end">
+        <main className="bg-slate-50 h-screen bg-gray-900 px-3">
+          <header className="md:px-10 mod py-5 flex justify-end">
             <ConnectWalletButton />
           </header>
 
