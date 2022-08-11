@@ -5,6 +5,7 @@ import { AmountButton } from "./AmountButton";
 import { Button } from "./Button";
 import { Input } from "./Input";
 import { PEEL_PROJECT_ID } from "../constants/juicebox";
+import { TransactionButton } from "./TransactionButton";
 
 const defaultAmounts = [0.01, 0.69, 1];
 
@@ -49,7 +50,7 @@ export function PayForm() {
         </span> */}
       </div>
 
-      <Button />
+      <TransactionButton>Fund us</TransactionButton>
     </form>
   );
 }

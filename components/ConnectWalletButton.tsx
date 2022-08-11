@@ -39,7 +39,11 @@ init({
   },
 });
 
-export function ConnectWalletButton() {
+export function ConnectWalletButton({
+  connectText = "Connect",
+}: {
+  connectText: string;
+}) {
   const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
   const { setSigningProvider } = useContext(NetworkContext);
 
@@ -60,9 +64,9 @@ export function ConnectWalletButton() {
       <button
         disabled={connecting}
         onClick={() => (wallet ? disconnect(wallet) : connect())}
-        className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-700"
+        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-700"
       >
-        {connecting ? "Connecting" : wallet ? "Disconnect" : "Connect"}
+        {connecting ? "Connecting" : wallet ? "Disconnect" : connectText}
       </button>
     </div>
   );
