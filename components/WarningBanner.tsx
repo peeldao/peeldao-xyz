@@ -14,7 +14,7 @@ export function WarningBanner() {
           <h3 className="text-sm font-medium text-yellow-800">
             This website is experimental.
           </h3>
-          <div className="mt-2  font-normal text-sm text-yellow-700">
+          <div className="mt-2 font-normal text-sm text-yellow-700">
             <p>Don't spend funds you aren't prepared to lose.</p>
           </div>
         </div>

@@ -29,7 +29,7 @@ export function PayForm() {
   return (
     <form onSubmit={onSubmit}>
       <div className="mb-5">
-        <div className="mb-1">
+        <div className="mb-2">
           {defaultAmounts.map((amount) => (
             <AmountButton
               amount={amount}

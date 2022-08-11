@@ -1,5 +1,6 @@
 import { JsonRpcProvider } from "@ethersproject/providers";
 import { NextPage } from "next";
+import Head from "next/head";
 import { useEffect } from "react";
 import { Card } from "../components/Card";
 import { ConnectWalletButton } from "../components/ConnectWalletButton";
@@ -14,7 +15,15 @@ const Home: NextPage = () => {
   return (
     <NetworkProvider>
       <JuiceProvider provider={provider}>
-        <main className="bg-slate-50 h-screen bg-gray-900 px-3">
+        <Head>
+          <title>Peel</title>
+          <meta
+            name="description"
+            content="Artisans of the outer layer. Builders in Web3."
+            key="description"
+          />
+        </Head>
+        <main className="h-screen bg-gray-900 px-3">
           <header className="md:px-10 mod py-5 flex justify-end">
             <ConnectWalletButton />
           </header>

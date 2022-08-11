@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: { domains: ["jbx.mypinata.cloud"] },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

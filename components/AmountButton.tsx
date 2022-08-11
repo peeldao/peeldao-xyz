@@ -11,7 +11,7 @@ export function AmountButton({
     <button
       onClick={onClick}
       type="button"
-      className="mr-1 inline-flex items-center px-2 py-0.25 border font-thin  border-slate-500 text-xs  rounded-full shadow-sm text-gray-200 bg-transparent hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-cyan-600"
+      className="mr-1 inline-flex items-center w-9 justify-center px-3 py-3 lg:py-1 font-thin text-sm rounded-md shadow-sm text-slate-300 bg-slate-700 border border-transparent hover:border-slate-500 border-inset box-content focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-cyan-600"
     >
       {ETH_SYMBOL}
       {amount}
