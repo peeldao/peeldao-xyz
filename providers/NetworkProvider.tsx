@@ -1,8 +1,7 @@
 import { PropsWithChildren, useEffect, useState } from "react";
-import { JsonRpcProvider } from "@ethersproject/providers";
 import { Web3Provider } from "@ethersproject/providers";
 
-import { NetworkContext } from "../contexts/NetworkProvider";
+import { NetworkContext } from "../contexts/NetworkContext";
 
 export default function NetworkProvider({ children }: PropsWithChildren<{}>) {
   const [signingProvider, setSigningProvider] = useState<
@@ -13,6 +12,7 @@ export default function NetworkProvider({ children }: PropsWithChildren<{}>) {
   >();
 
   useEffect(() => {
+    console.log("here", signingProvider, "signing");
     const updateAddress = async () => {
       const address = await signingProvider?.getSigner().getAddress();
       setConnectedWalletAddress(address);

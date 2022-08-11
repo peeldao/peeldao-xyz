@@ -5,5 +5,5 @@ import { createContext } from "react";
 export const NetworkContext: React.Context<{
   connectedWalletAddress?: string;
   signingProvider?: Web3Provider;
-  setSigningProvider?: (provider: Web3Provider) => void;
+  setSigningProvider?: (provider: Web3Provider | undefined) => void;
 }> = createContext({});

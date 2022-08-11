@@ -5,7 +5,7 @@ import { getTerminalV1_1Contract } from "juice-sdk-v1";
 import { ContractReadHookResponse, ProjectId } from "../../types";
 
 import useHookState from "../useHookState";
-import { NetworkContext } from "../../contexts/NetworkProvider";
+import { NetworkContext } from "../../contexts/NetworkContext";
 
 type DataType = ContractTransaction;
 

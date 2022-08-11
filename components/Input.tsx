@@ -8,20 +8,20 @@ export function Input(props: React.HTMLProps<HTMLInputElement>) {
       </label>
       <div className="relative rounded-md shadow-sm">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <span className="text-gray-500 sm:text-sm">{ETH_SYMBOL}</span>
+          <span className="text-gray-200 sm:text-sm font-thin">{ETH_SYMBOL}</span>
         </div>
         <input
           {...props}
           type="number"
           name="price"
           id="price"
-          className="focus:ring-sky-700 focus:border-sky-700 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+          className="focus:ring-cyan-500 focus:border-cyan-500 block w-full pl-7 pr-12 sm:text-sm border border-slate-500 rounded-md bg-transparent text-white"
           placeholder="0.00"
           step="0.01"
           aria-describedby="price-currency"
         />
         <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-          <span className="text-gray-500 sm:text-sm" id="price-currency">
+          <span className="text-gray-200 sm:text-sm font-thin" id="price-currency">
             ETH
           </span>
         </div>
