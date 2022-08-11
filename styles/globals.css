@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --onboard-font-family-normal: "DM Mono";
+    --onboard-modal-border-radius: 5px;
+}
