@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ContractTransaction } from "@ethersproject/contracts";
 import { BigNumber } from "@ethersproject/bignumber";
-import { getTerminalV1_1Contract } from "juice-sdk-v1";
+import { getTerminalV1_1 as getTerminalV1_1Contract } from "juice-sdk-v1";
 import { ContractReadHookResponse, ProjectId } from "../../types";
 
 import useHookState from "../useHookState";

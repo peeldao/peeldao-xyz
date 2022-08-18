@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { getProjectsContract } from "juice-sdk-v1";
+import { getProjects as getProjectsContract } from "juice-sdk-v1";
 import { ContractReadHookResponse, ProjectId } from "../../types";
 
 import { JuiceContext } from "../../contexts/JuiceContext";

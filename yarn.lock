@@ -2515,10 +2515,10 @@ json5@^1.0.1:
     array-includes "^3.1.5"
     object.assign "^4.1.3"
 
-juice-sdk-v1@^1.1.0-alpha:
-  version "1.1.0-alpha"
-  resolved "https://registry.npmjs.org/juice-sdk-v1/-/juice-sdk-v1-1.1.0-alpha.tgz"
-  integrity sha512-s/Fn0gmk/C0cqc049f0nzQfw3fdQVnx0NGi6sb2WZ1y1z0k7+Cv/A5TJNIcxwRK9AKFfHGlmL2uS6jtVql0Hpw==
+juice-sdk-v1@2.0.0-alpha:
+  version "2.0.0-alpha"
+  resolved "https://registry.yarnpkg.com/juice-sdk-v1/-/juice-sdk-v1-2.0.0-alpha.tgz#0ae30615bd2b4959028bae8327fa80a6dddd68f6"
+  integrity sha512-D82HYKaZsMuwmsnl6MhlCfH/FocIv69/b/M5dFVxWjs1xYWrJuDUi1E9knSUe+06aPtgp+Lt/u8ozCqZg1xN/A==
 
 keccak@^3.0.0:
   version "3.0.2"
